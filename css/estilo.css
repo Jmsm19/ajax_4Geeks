@@ -1,0 +1,85 @@
+body {
+  background-color: lightblue;
+}
+
+.container {
+  top: 0;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 10vh;
+  margin-bottom: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.container:nth-of-type(2) {
+  border-radius: 0 0 5px 5px;
+  margin-top: 0;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.interface {
+  margin: 20px 10px 20px 0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/*td, th {
+  min-width: 100px;
+}
+
+table {
+  height: 85vh;
+}
+
+thead {
+  display: inline-block;
+  width: 100%;
+}
+
+tbody {
+  display: block;
+  overflow: auto;
+}*/
+
+form,
+button {
+  text-transform: uppercase;
+}
+
+table tbody, table thead {
+    display: block;
+}
+
+table tbody {
+   overflow: auto;
+   height: 85vh;
+}
+
+table {
+    width: 350px;
+}
+
+th:nth-of-type(1), 
+td:nth-of-type(1) {
+  width: 50px; 
+}
+
+th:nth-of-type(2), 
+td:nth-of-type(2) {
+  width: 100px; 
+}
+
+th:nth-of-type(3), 
+td:nth-of-type(3) {
+  width: 400px; 
+}
+
+th:nth-of-type(4), 
+td:nth-of-type(4) {
+  width: 600px; 
+}
