@@ -1,16 +1,10 @@
-var root = 'https://jsonplaceholder.typicode.com';
 var tBody = $('tbody');
-var objAjax = {};
+var json = {};
 
 $(document).ready(function() {
   // INVOCAR AJAX
-  $.ajax({
-    url: root + '/posts/',
-    method: 'GET',
-    cache: false
-
-  }).then(function(data) {
-    objAjax = data;
+  $.getJSON('https://jsonplaceholder.typicode.com/posts/', function(data) {
+    json = data;
     // LLENAR LA TABLA CON LA INFORMACION AL CARGAR LA PAGINA
     var tRows = '';
     for (var index = 0; index < 15; index++) {
@@ -18,7 +12,7 @@ $(document).ready(function() {
                '</td><td>' + data[index].title + '</td><td>' + data[index].body + '</td></tr>';
     }
     tBody.append(tRows);
-  });
+  })
 
   // LIMPIAR LA TABLA CON EL BOTON [RESET]
   $('.reset').click(function() {
@@ -28,8 +22,8 @@ $(document).ready(function() {
   function agregarFilas() {
     var id = $('input').val() - 1;
     var tRow = '';
-    tRow += '<tr><td> ' + objAjax[id].id + '</td><td>' + objAjax[id].userId + 
-            '</td><td>' + objAjax[id].title + '</td><td>' + objAjax[id].body + '</td></tr>';
+    tRow += '<tr><td> ' + json[id].id + '</td><td>' + json[id].userId + 
+            '</td><td>' + json[id].title + '</td><td>' + json[id].body + '</td></tr>';
     tBody.append(tRow);
   }
   
