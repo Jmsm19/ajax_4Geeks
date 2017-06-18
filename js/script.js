@@ -2,12 +2,12 @@ var tBody = $('tbody');
 var json = {};
 
 $(document).ready(function() {
-  // INVOCAR AJAX
+  // INVOCAR JSON
   $.getJSON('https://jsonplaceholder.typicode.com/posts/', function(data) {
     json = data;
     // LLENAR LA TABLA CON LA INFORMACION AL CARGAR LA PAGINA
     var tRows = '';
-    for (var index = 0; index < 15; index++) {
+    for (var index = 0; index < 9; index++) {
       tRows += '<tr><td> ' + data[index].id + '</td><td>' + data[index].userId + 
                '</td><td>' + data[index].title + '</td><td>' + data[index].body + '</td></tr>';
     }

@@ -1,5 +1,6 @@
 body {
   background-color: lightblue;
+  overflow: hidden;
 }
 
 .container {
@@ -15,7 +16,7 @@ body {
 .container:nth-of-type(2) {
   border-radius: 0 0 5px 5px;
   margin-top: 0;
-  height: 85vh;
+  height: 87vh;
   position: relative;
   overflow: hidden;
 }
@@ -23,28 +24,6 @@ body {
 .interface {
   margin: 20px 10px 20px 0;
 }
-
-::-webkit-scrollbar { 
-    display: none; 
-}
-
-/*td, th {
-  min-width: 100px;
-}
-
-table {
-  height: 85vh;
-}
-
-thead {
-  display: inline-block;
-  width: 100%;
-}
-
-tbody {
-  display: block;
-  overflow: auto;
-}*/
 
 form,
 button {
@@ -57,7 +36,7 @@ table tbody, table thead {
 
 table tbody {
    overflow: auto;
-   height: 85vh;
+   height: 80vh;
 }
 
 table {
