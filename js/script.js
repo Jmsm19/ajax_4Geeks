@@ -7,7 +7,7 @@ $(document).ready(function() {
     json = data;
     // LLENAR LA TABLA CON LA INFORMACION AL CARGAR LA PAGINA
     var tRows = '';
-    for (var index = 0; index < 9; index++) {
+    for (var index = 0; index < 15; index++) {
       tRows += '<tr><td> ' + data[index].id + '</td><td>' + data[index].userId + 
                '</td><td>' + data[index].title + '</td><td>' + data[index].body + '</td></tr>';
     }
